@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cambio de color con letra</title>
+</head>
+<body>
+
+    <div id="key" style="height: 200px; width: 200px; background-color: white; border: black solid;"></div>
+
+    <div id="key2" style="height: 200px; width: 200px; background-color: white; border: black solid;"></div>
+
+    <script>
+        let fondo = 'white';
+        const key = document.getElementById('key');
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'a') {
+                fondo = 'pink';
+            } else if (event.key === 's') {
+                fondo = 'orange';
+            } else if (event.key === 'd') {
+                fondo = 'skyblue';
+            }
+            
+            key.style.backgroundColor = fondo;
+        });
+
+        let fondo2 = 'white';
+        const key2 = document.getElementById('key2');
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'q') {
+                fondo2 = 'purple';
+            } else if (event.key === 'w') {
+                fondo2 = 'gray';
+            } else if (event.key === 'e') {
+                fondo2 = 'brown';
+            }
+            
+            key2.style.backgroundColor = fondo2;
+        });
+    </script>
+</body>
+</html>
