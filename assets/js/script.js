@@ -5,12 +5,13 @@
 //     ele.addEventListener("click", pintar);
 
 
+const ele = document.getElementById("ele1");
+ele.style.backgroundColor = 'green';
+
 function pintar(event, color = 'green') {
-    console.log("Elemento clickeado:", event.target);
     event.target.style.backgroundColor = color;
 }
 
-const ele = document.getElementById("ele1");
 ele.addEventListener("click", function(event) {
     pintar(event, 'yellow');
 });
